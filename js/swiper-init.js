@@ -12,6 +12,10 @@ var newsSlider = new Swiper('.news-slider', {
 	loop: true,
 	autoplay: {
 		delay: 4000,
+	},
+	navigation: {
+		nextEl: '.news-slider-button-next',
+		prevEl: '.news-slider-button-prev',
 	}
 });
 
@@ -22,6 +26,7 @@ var sharesSlider = new Swiper('.shares-slider', {
 	slideActiveClass: 'shares-slide-active',
 	slideNextClass: 'shares-slide-next',
 	slidesPerView: 3,
+	spaceBetween: 11,
 	loop: true
 });
 
@@ -31,7 +36,8 @@ var birthdaysSlider = new Swiper('.birthdays-slider', {
 	slideClass: 'birthdays__slide',
 	slideActiveClass: 'birthdays__slide-active',
 	slideNextClass: 'birthdays__slide-next',
-	slidesPerView: 4,
+	spaceBetween: 25,
+	slidesPerView: 'auto',
 });
 
 var newWorkersSlider = new Swiper('.new-workers-slider', {

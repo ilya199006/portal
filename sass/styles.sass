@@ -51,11 +51,12 @@
 	float: right
 	width: 20px
 	height: 20px
-	margin-right: 16px
-	margin-bottom: 16px
 	background-color: transparent
 	background-image: url('../img/icon_info.png')
 	border: 0
+	&--request
+		margin-right: 16px
+		margin-bottom: 16px
 
 .rss
 	float: right
@@ -94,33 +95,47 @@
 				background-image: url('../img/header_icon_home.png')
 				background-size: cover
 
-		&-dollar		
+		&-dollar
+			display: inline-block
+			vertical-align: middle
 			margin-left: 317px
 			color: #545454
 			font-family: 'SegoeUIRegular'
 			font-size: 15px
+			&-sign
+				font-family: 'SegoeUIBold'
 		&-euro
+			display: inline-block
+			vertical-align: middle
 			margin-left: 23px
 			color: #545454
 			font-family: 'SegoeUIRegular'
 			font-size: 15px
+			&-sign
+				font-family: 'SegoeUIBold'
 		&-wifi
+			display: inline-block
+			vertical-align: middle
 			margin-left: 60px
 			color: #545454
 			font-family: 'SegoeUIBold'
 			font-size: 15px
 			&-pass
+				vertical-align: middle
 				color: #545454
 				font-family: 'SegoeUIRegular'
 				font-size: 15px
 		&-user
-			margin-left: 100px
+			display: inline-block
+			vertical-align: middle
+			margin-left: 150px
 			color: #545454
 			font-family: 'SegoeUISemiBold'
 			font-size: 15px
 
 		&-settings
 			display: inline-block
+			vertical-align: middle
 			width: 20px
 			height: 21px
 			margin-left: 20px
@@ -128,6 +143,7 @@
 		
 		&-help
 			display: inline-block
+			vertical-align: middle
 			width: 21px
 			height: 20px
 			margin-left: 20px
@@ -135,6 +151,7 @@
 		
 		&-smile
 			display: inline-block
+			vertical-align: middle
 			width: 19px
 			height: 20px
 			margin-left: 20px
@@ -142,7 +159,7 @@
 
 	&-bottom
 		position: fixed
-		top: 54px
+		top: 60px
 		width: 100%
 		z-index: 5		
 		background-color: #e1e1e1
@@ -293,6 +310,7 @@
 
 .news
 	&-inner
+		position: relative
 		box-sizing: border-box
 		margin-top: 30px
 		padding-left: 48px
@@ -320,21 +338,34 @@
 			border-bottom: 4px solid #ba2441
 
 	&-slider
-		overflow: hidden
-		position: relative
-		//font-size: 0
+		&-button-prev
+			position: absolute
+			left: 30px
+			bottom: 90px
+			z-index: 3
+			display: block
+			width: 37px
+			height: 37px
+			background-image: url('../img/arrow_prev.png')
+			background-size: cover
+		&-button-next
+			position: absolute
+			left: 1155px
+			bottom: 90px
+			z-index: 3
+			display: block
+			width: 37px
+			height: 37px
+			background-image: url('../img/arrow_next.png')
+			background-size: cover
 
 	&-slide
 			
 		&__item
 			font-size: 18px
-			//display: inline-block
-			//margin-right: 15px
 			background-image: url('../img/news_ct.png')
 			width: 270px
 			height: 170px
-			//&:nth-of-type(4)
-				//margin-right: 0
 
 .tiles
 	&-inner
@@ -426,24 +457,30 @@
 	&-for-managers
 		display: inline-block
 		box-sizing: border-box
-		vertical-align: middle
+		vertical-align: top
 		width: 597px
 		margin-right: 25px
-		padding-left: 50px
-		padding-top: 40px
+		padding-left: 13px
+		padding-top: 9px
+		padding-right: 13px
+		padding-bottom: 9px
 		border: 1px solid #bfbfbf
 
 	&-for-clients
 		display: inline-block
 		box-sizing: border-box
-		vertical-align: middle
+		vertical-align: top
 		width: 597px
-		padding-left: 50px
-		padding-top: 40px	
+		padding-left: 13px
+		padding-top: 9px
+		padding-right: 13px
+		padding-bottom: 9px	
 		border: 1px solid #bfbfbf
 
 	&__title
 		margin: 0
+		padding-left: 37px
+		padding-top: 31px
 		font-size: 30px
 		font-family: 'SegoeUISemiBold'
 		color: #2d2d2d
@@ -458,6 +495,7 @@
 		box-sizing: border-box
 		margin: 0
 		padding-top: 30px
+		padding-left: 37px
 		width: 400px
 		font-size: 15px
 		font-family: 'SegoeUILight'
@@ -469,11 +507,16 @@
 	&__link
 		float: right
 		margin-top: 23px
-		margin-right: 40px
+		margin-right: 37px
 		margin-bottom: 11px
 		font-size: 16px
 		font-family: 'SegoeUILight'
 		color: #ba2441
+
+	&-slider
+		margin-left: 37px
+		margin-right: 37px
+		margin-bottom: 9px
 
 	&-slide__item
 		font-size: 14px
@@ -516,7 +559,7 @@
 	&__user
 		display: inline-block
 		width: 95px
-		height: 98px
+		height: 96px
 		background-image: url('../img/icon_user.png')
 
 	&__number
